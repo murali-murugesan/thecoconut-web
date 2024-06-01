@@ -1,15 +1,12 @@
 import React from 'react';
 import { Menu } from 'antd';
 import {
-    HomeOutlined, ApartmentOutlined, FolderOpenOutlined, FundProjectionScreenOutlined, TrophyOutlined, ToolOutlined, MessageOutlined
+    HomeOutlined, FolderOpenOutlined, FundProjectionScreenOutlined, TrophyOutlined
 } from '@ant-design/icons';
 import Home from '../pages/Home';
-import Journey from '../pages/Journey';
-import Skill from '../pages/Skill';
 import Learnings from '../pages/Learnings';
 import Ideas from '../pages/Ideas';
 import Repository from '../pages/Repository';
-import Contact from '../pages/Contact';
 import { Link } from 'react-router-dom';
 
 const MenuItem: React.FC = () => {
