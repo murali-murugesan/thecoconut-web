@@ -3,6 +3,7 @@ import { Content, Footer, Header } from "antd/es/layout/layout";
 import MenuItem from "./MenuItem";
 import { Outlet } from "react-router-dom";
 import logo from "../assets/logo.png";
+import { FaChrome } from "react-icons/fa6";
 
 function CoconutLayout() {
 
@@ -16,7 +17,7 @@ function CoconutLayout() {
                 <Outlet />
             </Content>
             <Footer style={{ textAlign: 'center' }}>
-                thecoconut.com.au ©{new Date().getFullYear()} Created by Murali Murugesan
+                thecoconut.com.au ©{new Date().getFullYear()} Created by <b>Murali Murugesan</b> <i>(Best viewed in <FaChrome/> on a PC)</i>
             </Footer>
         </Layout>
     );

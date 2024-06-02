@@ -18,8 +18,9 @@ function MyCard() {
         title="Welcome to Thecoconut"
       />
      <br/>
-      Hello, This is <b>{aboutme.name}</b>. He is in the IT industry for the past 20 years in different roles and has a passion for technologies.
-      He currently works as a Senior Consultant and based in Brisbane. 
+      Hello, This is <b>{aboutme.name}</b>. He is in the IT industry for the past 20 years and currently works as a Senior Consultant and based in Brisbane. 
+      <br/><br/>
+      He has vast working experience across different domains and have performed roles ranging from Developer to Solution Architect. He has proven experience in Devops space with Openshift, AWS and currently exploring Azure.
 
       <br/><br/>He loves gardening,travelling and DIYs in the backyard.
 

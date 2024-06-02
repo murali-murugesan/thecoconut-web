@@ -10,15 +10,10 @@ function CoconutTech() {
     return (
         <>
             <Card style={{ height: "85vh"}}>
-                <p>Thecoconut is a personal brand to showcase technical skills, share learnings and ideas.
-                    Developed using latest cutting edge technologies and hosted on a cloud platform.
+                <p>Thecoconut is a personal brand developed using latest cutting edge technologies and hosted on a cloud platform to showcase technical skills, share learnings and ideas.
+                    <br/><br/>
                     This website is being developed using the following technologies, and the learnings acquired in doing so, has been documented under
                     the <Link to="/learnings">Learnings</Link> section.
-                </p>
-                <p>
-                    <Typography.Text code>
-                        Learnings & ideas documented are my personal view & has no reference to any organisation or personnel past or present.
-                    </Typography.Text>
                 </p>
 
                 <Row gutter={16}>
@@ -65,6 +60,13 @@ function CoconutTech() {
                         </Card>
                     </Col>
                 </Row>
+
+                <p>
+                    <Typography.Text code>
+                        <b>NOTE:</b> Learnings and ideas documented in this site are derived from my personal experience and has no reference to any Organisation, Gigs or personnel.
+                    </Typography.Text>
+                </p>
+
             </Card>
         </>
     );
