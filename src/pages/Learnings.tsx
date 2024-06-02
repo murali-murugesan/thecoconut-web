@@ -5,10 +5,10 @@ function Learnings(){
   return (
     <>
       <Row gutter={16}>
-        <Col>
+        <Col span={5}>
           <LearningTree />
         </Col>
-        <Col>
+        <Col span={19}>
           
         </Col>
       </Row>

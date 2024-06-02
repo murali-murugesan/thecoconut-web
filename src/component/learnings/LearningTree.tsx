@@ -1,6 +1,5 @@
 
 import { Card, Tree, TreeDataNode } from "antd";
-import "../Component.css";
 import { IoIosArrowDropdown } from "react-icons/io";
 import { BsEmojiSmile, BsEmojiSmileFill } from "react-icons/bs";
 
@@ -69,7 +68,7 @@ const treeData: TreeDataNode[] = [
 
 function LearningTree() {
   return (<>
-    <Card className="mycard-card-border">
+    <Card style={{ height: "85vh"}}>
       <Tree
         showIcon
         showLine

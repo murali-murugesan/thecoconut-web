@@ -5,10 +5,10 @@ function Repository(){
   return (
     <>
       <Row gutter={16}>
-        <Col>
+        <Col span={5}>
           <RepositoryTree />
         </Col>
-        <Col>
+        <Col span={19}>
           
         </Col>
       </Row>

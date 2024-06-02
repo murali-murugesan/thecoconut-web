@@ -3,27 +3,27 @@ import { Avatar, Card, Popover, Space } from "antd";
 import Meta from "antd/es/card/Meta";
 import Murali from "../../assets/mypicture.jpeg";
 import { Link } from "react-router-dom";
-import "../Component.css";
 import { FaEnvelope, FaLinkedin, FaPhone } from "react-icons/fa6";
 import aboutme from "../../config/aboutme.json"
 
 function MyCard() {
   return (<>
-    <Card className="mycard-card-border"
+    <Card style={{ height: "85vh"}}
       cover={
-        <img alt="Murali Murugesan" src={Murali} />
+        <img alt="Murali Murugesan" src={Murali}/>
       }
     >
       <Meta
         avatar={<Avatar src="https://api.dicebear.com/8.x/notionists/svg?scale=200" />}
         title="Welcome to Thecoconut"
       />
-      <p>Hello, This is <b>{aboutme.name}</b>. He is in the IT industry for the past 20 years in different roles and has a passion for technologies.
-        He currently works as a Senior Consultant and based in Brisbane. </p>
+     <br/>
+      Hello, This is <b>{aboutme.name}</b>. He is in the IT industry for the past 20 years in different roles and has a passion for technologies.
+      He currently works as a Senior Consultant and based in Brisbane. 
 
-      <p>He loves gardening,travelling and DIYs in the backyard.</p>
+      <br/><br/>He loves gardening,travelling and DIYs in the backyard.
 
-      <Space size={16} wrap style={{ float: 'right' }}>
+      <Space size={16} wrap style={{ float: 'right', marginTop: "20px"}}>
         <Link to={aboutme.linkedin} target="_blank" rel="noopener noreferrer">
           <FaLinkedin size="25" />
         </Link>

@@ -1,5 +1,4 @@
 import { Card, Col, Row, Tooltip, Typography } from "antd";
-import "../Component.css";
 import { FaGitSquare, FaReact } from "react-icons/fa";
 import { SiAntdesign, SiAzuredevops, SiMicrosoftazure, SiSpringboot, SiTypescript } from "react-icons/si";
 import { FaJava, FaNodeJs } from "react-icons/fa6";
@@ -10,7 +9,7 @@ function CoconutTech() {
 
     return (
         <>
-            <Card className="coconuttech-card-border">
+            <Card style={{ height: "85vh"}}>
                 <p>Thecoconut is a personal brand to showcase technical skills, share learnings and ideas.
                     Developed using latest cutting edge technologies and hosted on a cloud platform.
                     This website is being developed using the following technologies, and the learnings acquired in doing so, has been documented under
@@ -66,12 +65,6 @@ function CoconutTech() {
                         </Card>
                     </Col>
                 </Row>
-
-
-
-
-
-
             </Card>
         </>
     );

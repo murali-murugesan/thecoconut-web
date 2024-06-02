@@ -6,7 +6,7 @@ function Ideas(){
   return (
     <>
     <Row gutter={16}>
-      <Col>
+      <Col span={5}>
         <IdeasTree />
       </Col>
       <Col>

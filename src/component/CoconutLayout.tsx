@@ -12,7 +12,7 @@ function CoconutLayout() {
                 <Avatar size={60} style={{ marginRight: "40px" }} src={<img src={logo} className="App-logo" alt="logo" />} />
                 <MenuItem />
             </Header>
-            <Content>
+            <Content style={{ margin: "15px 15px 0 15px"}}>
                 <Outlet />
             </Content>
             <Footer style={{ textAlign: 'center' }}>
