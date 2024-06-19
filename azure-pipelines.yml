@@ -28,3 +28,4 @@ steps:
     WebAppName: 'thecoconut-web'
     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
     RuntimeStack: 'NODE|18-lts'
+    StartupCommand: 'npm run build'
