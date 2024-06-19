@@ -19,13 +19,20 @@ steps:
 #     skip_api_build: true
 #     is_static_export: false
 #     azure_static_web_apps_api_token: '19db63e726b896f8abaa9928f4251b790ffc3afa0befdf738e9fea42bde5a08f5-0ff97b69-69ea-43f3-b020-a696ae295407000160682'
-    
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'npm run build'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '/dist'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
 - task: AzureRmWebAppDeployment@4
   inputs:
     ConnectionType: 'AzureRM'
     azureSubscription: 'thecoconut.com.au(967fc952-c14d-437c-9651-2456c52acf13)'
     appType: 'webAppLinux'
     WebAppName: 'thecoconut-web'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    packageForLinux: 'drop'
     RuntimeStack: 'NODE|18-lts'
-    StartupCommand: 'npm run build'
