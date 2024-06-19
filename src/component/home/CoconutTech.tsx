@@ -1,4 +1,4 @@
-import { Card, Col, Row, Tooltip, Typography } from "antd";
+import { Card, Col, Tooltip, Typography } from "antd";
 import { FaGitSquare, FaReact } from "react-icons/fa";
 import { SiAntdesign, SiAzuredevops, SiMicrosoftazure, SiSpringboot, SiTailwindcss, SiTypescript, SiVite } from "react-icons/si";
 import { FaJava, FaNodeJs } from "react-icons/fa6";

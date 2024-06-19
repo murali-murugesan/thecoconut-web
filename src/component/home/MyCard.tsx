@@ -1,6 +1,5 @@
 
-import { Avatar, Card, Popover, Space } from "antd";
-import Meta from "antd/es/card/Meta";
+import { Card, Popover, Space } from "antd";
 import Murali from "../../assets/mypicture.jpeg";
 import { Link } from "react-router-dom";
 import { FaEnvelope, FaLinkedin, FaPhone } from "react-icons/fa6";
@@ -8,7 +7,7 @@ import aboutme from "../../config/aboutme.json"
 
 function MyCard() {
   return (<>
-    <Card className="shadow-2xl min-h-screen max-h-screen" cover={<img alt="Murali Murugesan" src={Murali}/>}>
+    <Card className="shadow-2xl min-h-screen max-h-screen" cover={<img alt="Murali Murugesan" src="https://media.licdn.com/dms/image/D5603AQHhY8zbKHNTGg/profile-displayphoto-shrink_800_800/0/1711449051597?e=1724284800&v=beta&t=YzUkCi2eqAq41GymIiVCyOOwg2wYOGyyCYfWHTodaD4"/>}>
      <p className="text-ellipsis">
         Hello, This is <b>{aboutme.name}</b>. He is in the IT industry for the past 20 years and currently works as a Senior Consultant and based in Brisbane. 
         <br/><br/>
