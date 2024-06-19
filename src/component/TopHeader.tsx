@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu } from 'antd';
+import { Avatar, Menu } from 'antd';
 import {
     HomeOutlined, FolderOpenOutlined, FundProjectionScreenOutlined, TrophyOutlined
 } from '@ant-design/icons';
@@ -8,8 +8,9 @@ import Learnings from '../pages/Learnings';
 import Ideas from '../pages/Ideas';
 import Repository from '../pages/Repository';
 import { Link } from 'react-router-dom';
+import logo from "../assets/logo.png";
 
-const MenuItem: React.FC = () => {
+const TopHeader: React.FC = () => {
     const iconStyle: React.CSSProperties = { fontSize: "20px" };
 
     const items = [
@@ -58,13 +59,16 @@ const MenuItem: React.FC = () => {
     ];
 
     return (
+        <>
+        <Avatar size={60} src={<img src={logo} alt="logo" />} />
         <Menu
             theme="dark"
             mode="horizontal"
             defaultSelectedKeys={['home']}
             items={items}
-            style={{ flex: 5, minWidth: 0, fontSize: "17px" }}
-        />)
+            className='flex-auto pl-4'
+        />
+        </>)
 }
 
-export default MenuItem;
+export default TopHeader;
