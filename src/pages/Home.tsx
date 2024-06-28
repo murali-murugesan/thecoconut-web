@@ -1,16 +1,12 @@
 import MyCard from "../component/home/MyCard";
-import CoconutTech from "../component/home/CoconutTech";
+import MyTech from "../component/home/MyTech";
 
 function Home() {
   return (
     <>
-      <div className="grid grid-flow-col gap-4">
-        <div className="row-span-2 max-h-screen">
+      <div className="grid grid-cols-[25%_75%] gap-2">
           <MyCard />
-        </div>
-        <div className="col-span-8">
-          <CoconutTech />
-        </div>
+          <MyTech />
       </div>
     </>);
 }
