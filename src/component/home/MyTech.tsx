@@ -1,6 +1,6 @@
-import { Card, Tooltip } from "antd";
+import { Card, Image, Tooltip } from "antd";
 import { FaGitSquare, FaReact } from "react-icons/fa";
-import { SiAnsible, SiAntdesign, SiApachefreemarker, SiApachegroovy, SiApachemaven, SiAzuredevops, SiBamboo, SiHelm, SiHibernate, SiMicrosoftazure, SiPlaywright, SiRedis, SiSpringboot, SiTailwindcss, SiTypescript, SiVite } from "react-icons/si";
+import { SiAnsible, SiAntdesign, SiApachefreemarker, SiApachegroovy, SiApachemaven, SiAzuredevops, SiBamboo, SiHelm, SiHibernate, SiJunit5, SiMariadb, SiMicrosoftazure, SiMongodb, SiOracle, SiPlaywright, SiPostgresql, SiRedis, SiSpringboot, SiTailwindcss, SiTypescript, SiVite } from "react-icons/si";
 import { FaAws, FaConfluence, FaJava, FaJenkins, FaJira, FaNodeJs, FaPython } from "react-icons/fa6";
 import { PiFileCssThin } from "react-icons/pi";
 import { DiOpenshift } from "react-icons/di";
@@ -66,6 +66,35 @@ function MyTech() {
                     </Card>
                 </div>
                 <div className="pb-2">
+                    <Card title="Database" className="flex bg-cyan-50" hoverable={true} bodyStyle={cardBodyStyle}>
+                        <Tooltip title="Postgresql" color="cyan">
+                            <SiPostgresql size={50} className="float-left px-2" />
+                        </Tooltip>
+                        <Tooltip title="Oracle DB" color="cyan">
+                            <SiOracle size={50} className="float-left px-2" />
+                        </Tooltip>
+                        <Tooltip title="Maria DB" color="cyan">
+                            <SiMariadb size={50} className="float-left px-2" />
+                        </Tooltip>
+                        <Tooltip title="Mongo DB" color="cyan">
+                            <SiMongodb size={50} className="float-left px-2" />
+                        </Tooltip>
+                    </Card>
+                </div>
+                <div className="pb-2">
+                    <Card title="Test" className="flex bg-cyan-50" hoverable={true} bodyStyle={cardBodyStyle}>
+                        <Tooltip title="JUnit" color="cyan">
+                            <SiJunit5 size={50} className="float-left px-2" />
+                        </Tooltip>
+                        <Tooltip title="Mockito" color="cyan">
+                            <Image src="https://github.com/mockito/mockito.github.io/raw/master/img/logo%402x.png" preview={false} width={100} className="float-left px-2" />
+                        </Tooltip>
+                        <Tooltip title="Playwright" color="cyan">
+                            <SiPlaywright size={50} className="float-left px-2" />
+                        </Tooltip>
+                    </Card>
+                </div>
+                <div className="pb-2">
                     <Card title="Platform" className="flex bg-cyan-50" hoverable={true} bodyStyle={cardBodyStyle}>
                         <Tooltip title="Azure Services" color="cyan">
                             <SiMicrosoftazure size={50} className="float-left px-2" />
@@ -114,8 +143,19 @@ function MyTech() {
                         <Tooltip title="Confluence" color="cyan">
                             <FaConfluence size={50} className="float-left px-2" />
                         </Tooltip>
-                        <Tooltip title="Playwright" color="cyan">
-                            <SiPlaywright size={50} className="float-left px-2" />
+                        <Tooltip title="Axway" color="cyan">
+                            <Image src="https://www.axway.com/themes/custom/axway2020/img/axway-logo-dark-gray.svg" preview={false} width={100} className="float-left px-2" />
+                        </Tooltip>
+                    </Card>
+                </div>
+                <div className="pt-4">
+                    <Card title="Certifications" className="flex bg-blue-400" hoverable={true} bodyStyle={cardBodyStyle}>
+                        <Tooltip title="Azure Data Fundamentals" color="cyan">
+                            <Image src="https://learn.microsoft.com/en-gb/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg" preview={false} width={100} className="float-left px-2" />
+                        </Tooltip>
+
+                        <Tooltip title="AWS Cloud Practitioner" color="cyan">
+                            <Image src="https://images.credly.com/size/680x680/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png" preview={false} width={100} className="float-left px-2" />
                         </Tooltip>
                     </Card>
                 </div>
