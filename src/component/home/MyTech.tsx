@@ -1,6 +1,6 @@
 import { Card, Image, Tooltip } from "antd";
 import { FaGitSquare, FaReact } from "react-icons/fa";
-import { SiAnsible, SiAntdesign, SiApachefreemarker, SiApachegroovy, SiApachemaven, SiAzuredevops, SiBamboo, SiHelm, SiHibernate, SiJunit5, SiMariadb, SiMicrosoftazure, SiMongodb, SiOracle, SiPlaywright, SiPostgresql, SiRedis, SiSpringboot, SiTailwindcss, SiTypescript, SiVite } from "react-icons/si";
+import { SiAnsible, SiAntdesign, SiApachefreemarker, SiApachegroovy, SiApachejmeter, SiApachemaven, SiAzuredevops, SiBamboo, SiElasticsearch, SiHelm, SiHibernate, SiJunit5, SiKibana, SiMariadb, SiMicrosoftazure, SiMongodb, SiOracle, SiPlaywright, SiPostgresql, SiRedis, SiSplunk, SiSpringboot, SiTailwindcss, SiTypescript, SiVite } from "react-icons/si";
 import { FaAws, FaConfluence, FaJava, FaJenkins, FaJira, FaNodeJs, FaPython } from "react-icons/fa6";
 import { PiFileCssThin } from "react-icons/pi";
 import { DiOpenshift } from "react-icons/di";
@@ -16,7 +16,7 @@ function MyTech() {
         <>
             <Card className=" min-h-screen max-h-screen min-w-full">
                 <div className="pb-2">
-                    <Card title="Front End" className="flex bg-cyan-50" hoverable={true} bodyStyle={cardBodyStyle}>
+                    <Card title="Frontend" className="flex bg-cyan-50" hoverable={true} bodyStyle={cardBodyStyle}>
                         <Tooltip title="ReactJs" color="cyan">
                             <FaReact size={50} className="float-left px-2" />
                         </Tooltip>
@@ -41,7 +41,7 @@ function MyTech() {
                     </Card>
                 </div>
                 <div className="pb-2">
-                    <Card title="Back End" className="flex bg-cyan-50" hoverable={true} bodyStyle={cardBodyStyle}>
+                    <Card title="Backend" className="flex bg-cyan-50" hoverable={true} bodyStyle={cardBodyStyle}>
                         <Tooltip title="Java" color="cyan">
                             <FaJava size={50} className="float-left px-2" />
                         </Tooltip>
@@ -92,6 +92,9 @@ function MyTech() {
                         <Tooltip title="Playwright" color="cyan">
                             <SiPlaywright size={50} className="float-left px-2" />
                         </Tooltip>
+                        <Tooltip title="JMeter" color="cyan">
+                            <SiApachejmeter size={50} className="float-left px-2" />
+                        </Tooltip>
                     </Card>
                 </div>
                 <div className="pb-2">
@@ -126,6 +129,19 @@ function MyTech() {
                         </Tooltip>
                         <Tooltip title="Helm Chart" color="cyan">
                             <SiHelm size={50} className="float-left px-2" />
+                        </Tooltip>
+                    </Card>
+                </div>
+                <div className="pb-2">
+                    <Card title="Observability" className="flex bg-cyan-50" hoverable={true} bodyStyle={cardBodyStyle}>
+                        <Tooltip title="Splunk" color="cyan">
+                            <SiSplunk size={50} className="float-left px-2" />
+                        </Tooltip>
+                        <Tooltip title="Elasitc Search" color="cyan">
+                            <SiElasticsearch size={50} className="float-left px-2" />
+                        </Tooltip>
+                        <Tooltip title="Kibana" color="cyan">
+                            <SiKibana size={50} className="float-left px-2" />
                         </Tooltip>
                     </Card>
                 </div>

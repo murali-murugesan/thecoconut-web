@@ -68,7 +68,7 @@ function MyCard() {
           <Link to="#"><FaPhone size={45} className="float-left px-2" /></Link>
         </Popover>
         <Tooltip title="Resume">
-          <Link to="#"><FaDownload size={45} className="float-left px-2" /></Link>
+          <Link to="https://thecoconutstorage.blob.core.windows.net/thecoconut-storage-blob-container/Murali Murugesan.doc"><FaDownload size={45} className="float-left px-2" /></Link>
         </Tooltip>
         <Tooltip title="Github">
           <Link to="https://github.com/murali-murugesan/thecoconut-web" target="new"><FaGithub size={45} className="float-left px-2" /></Link>
