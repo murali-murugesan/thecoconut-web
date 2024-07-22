@@ -10,7 +10,7 @@ const treeData: TreeDataNode[] = [
   {
     title: 'Australia',
     key: '0-0',
-    icon: <FcApproval size={15} />,
+    icon: <FcApproval size={15}/>,
     children: [
       {
         title: 'Senior Consultant - (DWS)',
@@ -18,16 +18,12 @@ const treeData: TreeDataNode[] = [
         icon: <FcApproval size={15} />,
       },
       {
-        title: 'Technical Lead - (Wipro)',
+        title: 'Technical Lead - Suncorp (as Partner)',
         key: '0-0-1',
       },
       {
         title: 'Senior Software Engineer - (CTM)',
         key: '0-0-2',
-      },
-      {
-        title: 'Technical Associate - (TechM)',
-        key: '0-0-3',
       },
       {
         title: 'Full Stack Engineer - (Advam)',

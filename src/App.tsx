@@ -23,6 +23,7 @@ function App() {
               <Route path="/repository" element={<Repository />} />
               <Route path="/skill" element={<Skill />} />
           </Route>
+          
         </Routes>
       </BrowserRouter>
     </>

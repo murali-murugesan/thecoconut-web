@@ -1,64 +1,118 @@
 
-import { Card, Tree, TreeDataNode } from "antd";
+import { Alert, Card, List, Space, Tree, TreeProps } from "antd";
 import { IoIosArrowDropdown } from "react-icons/io";
-import { BsEmojiSmile, BsEmojiSmileFill } from "react-icons/bs";
+import { useState } from "react";
+import ideaTree from "../../assets/idea-tree.json";
+import { BsCalendar, BsQuestion } from "react-icons/bs";
+import { FaUser } from "react-icons/fa6";
+import Title from "antd/es/typography/Title";
+import { BiBulb } from "react-icons/bi";
+import { SiContainerd } from "react-icons/si";
+import { GiThink } from "react-icons/gi";
 
-const treeData: TreeDataNode[] = [
-  {
-    title: 'Proven Ideas',
-    key: '0-0',
-    children: [
-      {
-        title: 'Spring Cloud Config',
-        key: '0-0-0',
-        icon: ({ selected }) => (selected ? <BsEmojiSmileFill size={15}/> : <BsEmojiSmile size={15}/>),
-      },
-    ],
-  },
-  {
-    title: 'Better Ways',
-    key: '0-1',
-    children: [
-      {
-        title: 'Agile - Is it working?',
-        key: '0-1-0',
-        icon: ({ selected }) => (selected ? <BsEmojiSmileFill size={15}/> : <BsEmojiSmile size={15}/>),
-      },
-    ],
-  },
-  {
-    title: 'Leadership',
-    key: '0-2',
-    children: [
-      {
-        title: 'Developer Voice',
-        key: '0-2-0',
-        icon: ({ selected }) => (selected ? <BsEmojiSmileFill size={15}/> : <BsEmojiSmile size={15}/>),
-      },
-      {
-        title: '1:Many',
-        key: '0-2-0',
-        icon: ({ selected }) => (selected ? <BsEmojiSmileFill size={15}/> : <BsEmojiSmile size={15}/>),
-      },
-    ],
-  },
-];
 
 
 function IdeasTree() {
+  const [data, setData] = useState([]);
+  const [ideaKey, setIdeaKey] = useState<string>();
+
+  const onSelect: TreeProps['onSelect'] = async (_selectedKey, info) => {
+    let ideaId = info.node.key?.toString();
+    if (ideaId.startsWith("_")) return;
+    setIdeaKey(info.node.title?.toString());
+    await fetch('http://localhost:8080/api/articles/' + ideaId, { method: 'GET', mode: 'cors' })
+      .then(data => data.json())
+      .then(json => setData(json));
+  };
+
   return (<>
-    <Card style={{ height: "85vh"}}>
+    <Card className="min-h-screen max-h-screen">
       <Tree
         showIcon
         showLine
         defaultExpandAll
-        defaultSelectedKeys={['0-0-0']}
-        switcherIcon={<IoIosArrowDropdown size={15}/>}
-        treeData={treeData}
+        defaultSelectedKeys={['devops-build-pipeline']}
+        switcherIcon={<IoIosArrowDropdown size={15} />}
+        treeData={ideaTree.content}
+        onSelect={onSelect}
       />
-
+    </Card>
+    <Card className=" min-h-screen max-h-screen min-w-full">
+      {getArticleContent(ideaKey)}
     </Card>
   </>);
+}
+
+const data = [
+  {
+    title: 'Spring Cloud Config Server',
+    description: 'To externalize API specific properties',
+  },
+  {
+    title: 'Spring Boot Actuator',
+    description: 'To monitor API',
+  },
+  {
+    title: 'CI/CD tool',
+    description: 'That supports scripting in the pipeline',
+  },
+  {
+    title: 'Container platform',
+    description: 'Any container platform - Kubernetes, OpenShift, Azure Container Apps',
+  },
+];
+
+function getArticleContent(ideaKey: string | undefined) {
+  if (ideaKey != null) {
+    return (<>
+      <div id="content-title">
+        <Alert
+          message={ideaKey}
+          description="Spring cloud config server can be used for both API rutime & platform properties."
+          type="info"
+          showIcon
+          icon={<BiBulb />}
+        />
+      </div>
+      <div id="content-body" className="pt-3">
+        
+          <Title level={5}>Context:</Title>
+          Given an API uses the following,
+
+
+          <List
+            itemLayout="horizontal"
+            dataSource={data}
+            renderItem={(item, index) => (
+              <List.Item>
+                <List.Item.Meta
+                  avatar={<SiContainerd />}
+                  title={<a href="https://ant.design">{item.title}</a>}
+                  description={item.description}
+                />
+              </List.Item>
+            )}
+          />
+
+          <Alert
+            message="How?"
+            description="Do we manage API specific platform properties like scaling, memory, health check url etc...?"
+            type="warning"
+            showIcon
+            icon={<GiThink />}
+          />
+         <br/>
+          <Title level={5}>Solution:</Title>
+          
+          Spring cloud config server (CCS) can be used to host both API and platform specific properties, it can be run as part of the pipeline which generates the API specific properties and runtime platform properties. Lets see how,
+
+
+
+            
+
+      </div>
+    </>);
+  }
 }
 
 export default IdeasTree;

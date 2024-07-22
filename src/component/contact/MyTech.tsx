@@ -1,6 +1,6 @@
 import { Card, Image, Tooltip } from "antd";
 import { FaGitSquare, FaReact } from "react-icons/fa";
-import { SiAnsible, SiAntdesign, SiApachefreemarker, SiApachegroovy, SiApachejmeter, SiApachemaven, SiAzuredevops, SiBamboo, SiElasticsearch, SiHelm, SiHibernate, SiJunit5, SiKibana, SiMariadb, SiMicrosoftazure, SiMongodb, SiOracle, SiPlaywright, SiPostgresql, SiRedis, SiSplunk, SiSpringboot, SiTailwindcss, SiTypescript, SiVite } from "react-icons/si";
+import { SiAnsible, SiAntdesign, SiApachefreemarker, SiApachegroovy, SiApachejmeter, SiApachemaven, SiAzuredevops, SiBamboo, SiDocker, SiElasticsearch, SiHelm, SiHibernate, SiJunit5, SiKibana, SiKubernetes, SiMariadb, SiMicrosoftazure, SiMongodb, SiOracle, SiPlaywright, SiPostgresql, SiRedis, SiSplunk, SiSpringboot, SiTailwindcss, SiTypescript, SiVite } from "react-icons/si";
 import { FaAws, FaConfluence, FaJava, FaJenkins, FaJira, FaNodeJs, FaPython } from "react-icons/fa6";
 import { PiFileCssThin } from "react-icons/pi";
 import { DiOpenshift } from "react-icons/di";
@@ -107,6 +107,12 @@ function MyTech() {
                         </Tooltip>
                         <Tooltip title="OpenShift" color="cyan">
                             <DiOpenshift size={50} className="float-left px-2" />
+                        </Tooltip>
+                        <Tooltip title="Docker" color="cyan">
+                            <SiDocker size={50} className="float-left px-2" />
+                        </Tooltip>
+                        <Tooltip title="Kubernetes" color="cyan">
+                            <SiKubernetes size={50} className="float-left px-2" />
                         </Tooltip>
                     </Card>
                 </div>
