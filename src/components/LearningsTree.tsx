@@ -1,9 +1,7 @@
-import { Card, Tree, TreeProps } from "antd";
-import { IoIosArrowDropdown } from "react-icons/io";
+import { Card, TreeProps } from "antd";
 
 import { useState } from "react";
 
-import learning from "../../assets/learning-tree.json"
 
 function LearningsTree() {
     const [learningKey, setLearningKey] = useState<string>();
@@ -18,17 +16,6 @@ function LearningsTree() {
     };
 
     return (<>
-        <Card className="min-h-screen max-h-screen">
-            <Tree
-                showIcon
-                showLine
-                defaultExpandAll
-                defaultSelectedKeys={['0-0-0']}
-                switcherIcon={<IoIosArrowDropdown size={15} />}
-                treeData={learning.content}
-                onSelect={onSelect}
-            />
-        </Card>
         <Card className=" min-h-screen max-h-screen min-w-full">
             <div id="content-title">
                 {learningKey}

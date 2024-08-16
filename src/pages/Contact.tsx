@@ -1,5 +1,4 @@
-import MyCard from "../component/contact/MyCard";
-import MyTech from "../component/contact/MyTech";
+import { MyCard, MyTech } from "@components";
 
 function Contact() {
   return (

@@ -1,8 +1,6 @@
 
-import { Alert, Card, Image, List, Tree, TreeProps } from "antd";
-import { IoIosArrowDropdown } from "react-icons/io";
+import { Alert, Card, Image, List, TreeProps } from "antd";
 import { useState } from "react";
-import ideaTree from "../../assets/idea-tree.json";
 import Title from "antd/es/typography/Title";
 import { BiBulb } from "react-icons/bi";
 import { SiContainerd } from "react-icons/si";
@@ -14,27 +12,7 @@ function IdeasTree() {
   const [, setData] = useState([]);
   const [ideaKey, setIdeaKey] = useState<string>();
 
-  const onSelect: TreeProps['onSelect'] = async (_selectedKey, info) => {
-    let ideaId = info.node.key?.toString();
-    if (ideaId.startsWith("_")) return;
-    setIdeaKey(info.node.title?.toString());
-    await fetch('http://localhost:8080/api/articles/' + ideaId, { method: 'GET', mode: 'cors' })
-      .then(data => data.json())
-      .then(json => setData(json));
-  };
-
   return (<>
-    <Card className="min-h-screen max-h-screen">
-      <Tree
-        showIcon
-        showLine
-        defaultExpandAll
-        defaultSelectedKeys={['devops-build-pipeline']}
-        switcherIcon={<IoIosArrowDropdown size={15} />}
-        treeData={ideaTree.content}
-        onSelect={onSelect}
-      />
-    </Card>
     <Card className=" min-h-screen max-h-screen min-w-full">
       {getArticleContent(ideaKey)}
     </Card>

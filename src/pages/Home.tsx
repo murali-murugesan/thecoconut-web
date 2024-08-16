@@ -96,8 +96,6 @@ function Home() {
               </article>
             </div>
           </div>
-        
-
       </Card>
     </>);
 }
