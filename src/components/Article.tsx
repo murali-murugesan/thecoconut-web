@@ -1,10 +1,6 @@
 
-import { Alert, Card, List, Space, Tree, TreeProps } from "antd";
-import { IoIosArrowDropdown } from "react-icons/io";
+import { Alert, Card, Image, List, TreeProps } from "antd";
 import { useState } from "react";
-import ideaTree from "../../assets/idea-tree.json";
-import { BsCalendar, BsQuestion } from "react-icons/bs";
-import { FaUser } from "react-icons/fa6";
 import Title from "antd/es/typography/Title";
 import { BiBulb } from "react-icons/bi";
 import { SiContainerd } from "react-icons/si";
@@ -13,30 +9,10 @@ import { GiThink } from "react-icons/gi";
 
 
 function IdeasTree() {
-  const [data, setData] = useState([]);
+  const [, setData] = useState([]);
   const [ideaKey, setIdeaKey] = useState<string>();
 
-  const onSelect: TreeProps['onSelect'] = async (_selectedKey, info) => {
-    let ideaId = info.node.key?.toString();
-    if (ideaId.startsWith("_")) return;
-    setIdeaKey(info.node.title?.toString());
-    await fetch('http://localhost:8080/api/articles/' + ideaId, { method: 'GET', mode: 'cors' })
-      .then(data => data.json())
-      .then(json => setData(json));
-  };
-
   return (<>
-    <Card className="min-h-screen max-h-screen">
-      <Tree
-        showIcon
-        showLine
-        defaultExpandAll
-        defaultSelectedKeys={['devops-build-pipeline']}
-        switcherIcon={<IoIosArrowDropdown size={15} />}
-        treeData={ideaTree.content}
-        onSelect={onSelect}
-      />
-    </Card>
     <Card className=" min-h-screen max-h-screen min-w-full">
       {getArticleContent(ideaKey)}
     </Card>
@@ -83,7 +59,7 @@ function getArticleContent(ideaKey: string | undefined) {
           <List
             itemLayout="horizontal"
             dataSource={data}
-            renderItem={(item, index) => (
+            renderItem={(item) => (
               <List.Item>
                 <List.Item.Meta
                   avatar={<SiContainerd />}
@@ -96,7 +72,7 @@ function getArticleContent(ideaKey: string | undefined) {
 
           <Alert
             message="How?"
-            description="Do we manage API specific platform properties like scaling, memory, health check url etc...?"
+            description="To manage API specific platform properties like scaling, memory, health check url etc...?"
             type="warning"
             showIcon
             icon={<GiThink />}
@@ -106,9 +82,9 @@ function getArticleContent(ideaKey: string | undefined) {
           
           Spring cloud config server (CCS) can be used to host both API and platform specific properties, it can be run as part of the pipeline which generates the API specific properties and runtime platform properties. Lets see how,
 
+          <Image src="https://thecoconutstorage.blob.core.windows.net/thecoconut-container/ideas/build pipeline/Spring CCS - Current State.jpg"></Image>
 
-
-            
+          <Image src="https://thecoconutstorage.blob.core.windows.net/thecoconut-container/ideas/build pipeline/Spring CCS - future state.jpg"/>  
 
       </div>
     </>);

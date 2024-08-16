@@ -175,6 +175,9 @@ function MyTech() {
                         <Tooltip title="Azure Data Fundamentals" color="cyan">
                             <Image src="https://learn.microsoft.com/en-gb/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg" preview={false} width={100} className="float-left px-2" />
                         </Tooltip>
+                        <Tooltip title="Azure Developer Associate" color="cyan">
+                            <Image src="https://learn.microsoft.com/media/learn/certification/badges/microsoft-certified-associate-badge.svg?branch=main" preview={false} width={100} className="float-left px-2" />
+                        </Tooltip>
 
                         <Tooltip title="AWS Cloud Practitioner" color="cyan">
                             <Image src="https://images.credly.com/size/680x680/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png" preview={false} width={100} className="float-left px-2" />

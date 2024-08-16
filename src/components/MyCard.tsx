@@ -2,7 +2,7 @@
 import { Card, Image, Popover, Tooltip, Tree, TreeDataNode } from "antd";
 import { Link } from "react-router-dom";
 import { FaDownload, FaEnvelope, FaGithub, FaLinkedin, FaPhone } from "react-icons/fa6";
-import aboutme from "../../config/aboutme.json"
+import aboutme from "../config/aboutme.json"
 import { FcApproval } from "react-icons/fc";
 import { IoIosArrowDropdown } from "react-icons/io";
 
