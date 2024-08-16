@@ -17,3 +17,10 @@ And Deployed on Azure service app pointing to the custom domain. A devops reposi
 To Start THECOCONUT website on Azure App service, following is the startup command,
 
  `pm2 serve /home/site/wwwroot --no-daemon`
+
+
+ # RUN
+
+ docker build -t muralimurugesan/thecoconut:latest --platform linux/amd64 .
+
+ docker push muralimurugesan/thecoconut:latest

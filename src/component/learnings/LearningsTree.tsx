@@ -7,7 +7,7 @@ import learning from "../../assets/learning-tree.json"
 
 function LearningsTree() {
     const [learningKey, setLearningKey] = useState<string>();
-    const [data, setData] = useState([]);
+    const [data, setData] = useState<any[]>([]);
 
     const onSelect: TreeProps['onSelect'] = async (_selectedKey, info) => {
         let learningId = info.node.key?.toString();

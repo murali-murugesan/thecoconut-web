@@ -16,18 +16,6 @@ const TopHeader: React.FC = () => {
             label: <Link to="/home">Home</Link>,
             icon: <HomeOutlined style={iconStyle} />
         },
-        // {
-        //     key: "journey",
-        //     label: <Link to="/journey">Journey</Link>,
-        //     icon: <ApartmentOutlined style={iconStyle} />,
-        //     component: <Journey />
-        // },
-        // {
-        //     key: "skill",
-        //     label: <Link to="/skill">Skill</Link>,
-        //     icon: <ToolOutlined style={iconStyle} />,
-        //     component: <Skill />
-        // },
         {
             key: "learnings",
             label: <Link to="/learnings">Learnings</Link>,
@@ -38,12 +26,6 @@ const TopHeader: React.FC = () => {
             label: <Link to="/ideas">Ideas</Link>,
             icon: <TrophyOutlined style={iconStyle} />
         },
-        // {
-        //     key: "repository",
-        //     label: <Link to="/repository">Repository</Link>,
-        //     icon: <FolderOpenOutlined style={iconStyle} />,
-        //     component: <Repository />
-        // },
         {
             key: "About Me",
             label: <Link to="/contact">About Me</Link>,
