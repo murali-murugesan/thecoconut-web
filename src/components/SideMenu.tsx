@@ -23,7 +23,7 @@ function SideMenu( props : SideMenuProps) {
       const selectedMenuItems: string[] = [props.selectedMenu];
     return (
         <>
-            <Sider style={siderStyle}>
+            <Sider style={siderStyle} width={300}>
                 <Menu
                     mode="inline"
                     defaultSelectedKeys={selectedMenuItems}
