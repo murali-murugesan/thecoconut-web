@@ -1,10 +1,10 @@
-import { MenuProps, TreeProps } from "antd";
+import { MenuProps } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
 import {
     CloudOutlined,HomeOutlined, ProfileOutlined, FundProjectionScreenOutlined, TrophyOutlined
 } from '@ant-design/icons';
-import { fetchArticles } from "@api/learnings";
+import { SiSwagger } from "react-icons/si";
 
 
 
@@ -27,19 +27,16 @@ export  const TopMenu : MenuProps['items'] = [
         icon: <TrophyOutlined style={iconStyle} />
     },
     {
+        key: "swagger",
+        label: <Link to="/swagger">Swagger</Link>,
+        icon: <SiSwagger style={iconStyle} />
+    },
+    {
         key: "contact",
         label: <Link to="/contact">About Me</Link>,
         icon: <ProfileOutlined style={iconStyle} />
     },
 ];
-
-
-const onSelect: TreeProps['onSelect'] = async (_selectedKey, info) => {
-    let ideaId = info.node.key?.toString();
-    if (ideaId.startsWith("_")) return;
-    //setIdeaKey(info.node.title?.toString());
-    fetchArticles(ideaId);
-  };
 
 export const IdeasMenu: MenuProps['items'] = [
     {
