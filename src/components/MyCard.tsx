@@ -67,7 +67,7 @@ function MyCard() {
           <Link to="https://thecoconutstorage.blob.core.windows.net/thecoconut-storage-blob-container/Murali Murugesan.doc"><FaDownload size={45} className="float-left px-2" /></Link>
         </Tooltip>
         <Tooltip title="Github">
-          <Link to="https://github.com/murali-murugesan/thecoconut-web" target="new"><FaGithub size={45} className="float-left px-2" /></Link>
+          <Link to="https://github.com/murali-murugesan/" target="new"><FaGithub size={45} className="float-left px-2" /></Link>
         </Tooltip>
       </div>
 
