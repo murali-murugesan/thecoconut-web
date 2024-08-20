@@ -1,20 +1,19 @@
 
-import { Alert, Card, Image, List, TreeProps } from "antd";
-import { useState } from "react";
+import { Alert, Card, Image, List } from "antd";
 import Title from "antd/es/typography/Title";
 import { BiBulb } from "react-icons/bi";
 import { SiContainerd } from "react-icons/si";
 import { GiThink } from "react-icons/gi";
+import { Article } from "@types";
 
+interface ArticleContainerProps {
+  article: Article | null;
+}
 
-
-function IdeasTree() {
-  const [, setData] = useState([]);
-  const [ideaKey, setIdeaKey] = useState<string>();
-
+function ArticleContainer( {article} : ArticleContainerProps) {
   return (<>
     <Card className=" min-h-screen max-h-screen min-w-full">
-      {getArticleContent(ideaKey)}
+      {getArticleContent(article?.title)}
     </Card>
   </>);
 }
@@ -83,7 +82,7 @@ function getArticleContent(ideaKey: string | undefined) {
           Spring cloud config server (CCS) can be used to host both API and platform specific properties, it can be run as part of the pipeline which generates the API specific properties and runtime platform properties. Lets see how,
 
           <Image src="https://thecoconutstorage.blob.core.windows.net/thecoconut-container/ideas/build pipeline/Spring CCS - Current State.jpg"></Image>
-
+            <br/>
           <Image src="https://thecoconutstorage.blob.core.windows.net/thecoconut-container/ideas/build pipeline/Spring CCS - future state.jpg"/>  
 
       </div>
@@ -91,4 +90,4 @@ function getArticleContent(ideaKey: string | undefined) {
   }
 }
 
-export default IdeasTree;
+export default ArticleContainer;

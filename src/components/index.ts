@@ -5,7 +5,7 @@ import CoconutLayout from "./CoconutLayout"
 import MyCard from "./MyCard"
 import MyTech from "./MyTech"
 import LearningsTree from "./LearningsTree"
-import Article from "./Article"
+import ArticleContainer from "./ArticleContainer"
 
 export {
     TopHeader,
@@ -14,5 +14,6 @@ export {
     MyCard,
     MyTech,
     LearningsTree,
-    Article,
+    ArticleContainer,
+   
 }

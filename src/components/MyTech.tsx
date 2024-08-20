@@ -9,7 +9,7 @@ function MyTech() {
     return (
         <>
             <Card className=" min-h-screen max-h-screen min-w-full">
-                {Array.from(SkillMap.entries()).map(([title, skillEntry]) =>(
+                {Array.from(SkillMap.entries()).map(([title, skillEntry]) => (
                     <div className="pb-2">
                         <Card title={title} className="flex bg-cyan-50" hoverable={true} bodyStyle={cardBodyStyle}>
                             {skillEntry.map(skill => (

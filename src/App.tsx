@@ -1,9 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import CoconutLayout from "./components/CoconutLayout";
-import Contact from "./pages/Contact";
-import Ideas from "./pages/Ideas";
-import Learnings from "./pages/Learnings";
+import { CoconutLayout } from "@components";
+import { Contact, Home, Ideas, Learnings, Swagger } from "@pages";
 
 function App() {
   return (
@@ -16,6 +13,7 @@ function App() {
               <Route path="/ideas" element={<Ideas />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/learnings" element={<Learnings />} />
+              <Route path="/swagger" element={<Swagger />} />
           </Route>
         </Routes>
       </BrowserRouter>

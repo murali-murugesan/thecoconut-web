@@ -1,13 +1,25 @@
-import { Article } from "@components";
+import { getArticle } from "@api";
+import { ArticleContainer } from "@components";
+import { useSelectedMenu } from "@components/CoconutLayout";
+import { Article } from "@types";
+import { useEffect, useState } from "react";
 
+function Ideas() {
+  const [article, setArticle] = useState<Article | null>(null);
+  const selectedMenu = useSelectedMenu();
 
-function Ideas(){
+  useEffect(() => {
+    getArticle(selectedMenu).then((response) => {
+      setArticle(response);
+    });
+  }, [selectedMenu]);
+
   return (
     <>
-   <div>
-        <Article/>
+      <div>
+        <ArticleContainer article={article} />
       </div>
-  </>);
+    </>);
 }
 
 export default Ideas;
