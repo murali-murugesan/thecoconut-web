@@ -5,7 +5,7 @@ import "swagger-ui-react/swagger-ui.css";
 function Swagger() {
     return (
         <>
-            <Card className="min-h-screen max-h-screen">
+            <Card>
                 <SwaggerUI url="https://thecoconut-article.proudbay-13759061.australiaeast.azurecontainerapps.io/thecoconut/api/v3/api-docs" />
             </Card>
         </>);

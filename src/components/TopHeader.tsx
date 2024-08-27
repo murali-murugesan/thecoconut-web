@@ -11,13 +11,13 @@ function TopHeader({onMenuSelect} : TopHeaderProps){
 
     return (
         <>
-            <Avatar size={60} src={<img src={logo} alt="logo" />} />
+            <Avatar size={60} src={<img src={logo} alt="logo"/>} className='float-left mr-2' />
             <Menu
                 theme="dark"
                 mode="horizontal"
                 defaultSelectedKeys={['home']}
                 items={TopMenu}
-                className='flex-auto pl-4'
+                //className='flex-auto pl-4'
                 onClick={(e) => onMenuSelect(e.key)}
             >
             </Menu>

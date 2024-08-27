@@ -1,5 +1,5 @@
 import { getArticle } from "@api";
-import { LearningsTree } from "@components";
+import { ArticleContainer } from "@components";
 import { useSelectedMenu } from "@components/CoconutLayout";
 import { Article } from "@types";
 import { useEffect, useState } from "react";
@@ -17,7 +17,7 @@ function Learnings() {
   return (
     <>
       <div>
-        <LearningsTree/>
+        <ArticleContainer article={article} />
       </div>
     </>);
 }

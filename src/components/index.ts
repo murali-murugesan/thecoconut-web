@@ -4,7 +4,6 @@ import SideMenu from "./SideMenu"
 import CoconutLayout from "./CoconutLayout"
 import MyCard from "./MyCard"
 import MyTech from "./MyTech"
-import LearningsTree from "./LearningsTree"
 import ArticleContainer from "./ArticleContainer"
 
 export {
@@ -13,7 +12,6 @@ export {
     CoconutLayout,
     MyCard,
     MyTech,
-    LearningsTree,
     ArticleContainer,
    
 }

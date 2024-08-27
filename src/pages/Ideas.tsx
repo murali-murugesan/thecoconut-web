@@ -16,9 +16,7 @@ function Ideas() {
 
   return (
     <>
-      <div>
         <ArticleContainer article={article} />
-      </div>
     </>);
 }
 
